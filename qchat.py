@@ -9,7 +9,7 @@ from pypdf import PdfReader
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
-# Initialize Gemini Model
+# Gemini Model
 model = genai.GenerativeModel("gemini-1.5-pro-latest")
 chat = model.start_chat(history=[])
 
@@ -25,9 +25,9 @@ def get_gemini_response(question, context):
     response = chat.send_message(prompt, stream=True)
     return response
 
-# Streamlit App Configuration
+# Streamlit Configuration
 st.set_page_config(page_title="PDF Chatbot", layout="wide")
-st.header("📄 Chat with your PDF")
+st.header("📄 ChatBot")
 
 # File Upload
 pdf_file = st.file_uploader("Upload a PDF", type=["pdf"])
@@ -35,9 +35,9 @@ pdf_file = st.file_uploader("Upload a PDF", type=["pdf"])
 if pdf_file:
     pdf_text = extract_text_from_pdf(pdf_file)
     st.session_state["pdf_text"] = pdf_text  # Store in session state
-    st.success("PDF Uploaded and Processed Successfully!")
+    st.success("PDF Uploaded Successfully!")
 
-# Initialize session state for chat history
+# Initialize session
 if "chat_history" not in st.session_state:
     st.session_state["chat_history"] = []
 
@@ -71,5 +71,23 @@ st.subheader("Chat History")
 for role, text in st.session_state["chat_history"]:
     st.write(f"**{role}**: {text}")
 
+"""
+if submit and user_input:
+    pdf_text = st.session_state.get("pdf_text", "")
+    response = get_gemini_response(user_input, st.session_state["pdf_text"])
+        
+    # Add user message to history
+    st.session_state["chat_history"].append(("You", user_input))
 
-
+    st.subheader("Response")
+    bot_response = ""
+        
+    response_container = st.empty()  # To display streamed response
+    for chunk in response:
+        if hasattr(chunk, "text"):  # Ensure chunk has a text attribute
+            bot_response += chunk.text
+            response_container.write(bot_response)  # Stream output
+        
+        # Add bot response to history
+    st.session_state["chat_history"].append(("Bot", bot_response))
+"""
