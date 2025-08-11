@@ -23,7 +23,7 @@ Before running this project, ensure you have the following:
 
 * **Python 3.x**
 * **pip** (Python package installer)
-* **Google Gemini API Key:** You'll need to obtain an API key from the Google AI Studio or Google Cloud Console.
+* **Google Gemini API Key:** You'll need to obtain an API key from the Google AI Studio or Google Cloud Console. 
 
 ### Installation
 
