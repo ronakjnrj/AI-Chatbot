@@ -18,7 +18,7 @@ This project is a conversational AI chatbot built using the powerful Google Gemi
 **Getting Started:**
 
 ### Prerequisites 
-
+ 
 Before running this project, ensure you have the following:
 
 * **Python 3.x**
