@@ -6,7 +6,7 @@
  
 This project is a conversational AI chatbot built using the powerful Google Gemini API. It allows users to interact with an intelligent agent capable of understanding natural language and generating relevant responses. This chatbot can be customized for various applications, from customer support to informational queries.  
 
-**Key Features:** 
+**Key Features:**
  
 * **Gemini API Integration:** Leverages the advanced capabilities of the Google Gemini API for natural language processing and generation.
 * **Conversational Interface:** Provides a smooth and intuitive text-based interface for user interaction. 
