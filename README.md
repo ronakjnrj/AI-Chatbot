@@ -15,7 +15,7 @@ This project is a conversational AI chatbot built using the powerful Google Gemi
 * **[Optional Feature 3]:** [e.g., Error handling for API requests and rate limits.]
 * **Scalable and Flexible:** Designed to be adaptable for various applications and can be extended with additional functionalities. 
 
-**Getting Started:**
+**Getting Started:** 
 
 ### Prerequisites 
   
